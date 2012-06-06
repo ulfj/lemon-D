@@ -1,5 +1,16 @@
+/*
+** Simple example based on: http://souptonuts.sourceforge.net/readme_lemon_tutorial.html
+**
+** The simple way to compile and run this example:
+** 
+** lemon L=D T=lempar.d <path>calc-01.y
+** rdmd -unittest --main calc-01.d
+**
+*/
+
 %token_type {int}
 %name Calc
+%module_name "calc01"
 %left PLUS MINUS.
 %left DIVIDE TIMES.
 
