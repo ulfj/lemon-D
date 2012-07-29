@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 11
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lemon", "lemon\lemon.vcxproj", "{5A6D4D59-9D62-6E04-D315-A66346983D8E}"
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lemon", "lemon\lemon.vcxproj", "{1EEFDCE0-6B02-0BAA-B7EA-C72022B14D28}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CD648A0-AB4B-46CD-8F40-662AD7DBC9B9}"
 	ProjectSection(SolutionItems) = preProject
 		lemon\lempar.d = lemon\lempar.d
 	EndProjectSection
+EndProject
+Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "json", "examples\json\json.visualdproj", "{CC5E9607-78F0-4369-B3E6-83DF2DFFED55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,10 +16,14 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A6D4D59-9D62-6E04-D315-A66346983D8E}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5A6D4D59-9D62-6E04-D315-A66346983D8E}.Debug|Win32.Build.0 = Debug|Win32
-		{5A6D4D59-9D62-6E04-D315-A66346983D8E}.Release|Win32.ActiveCfg = Release|Win32
-		{5A6D4D59-9D62-6E04-D315-A66346983D8E}.Release|Win32.Build.0 = Release|Win32
+		{1EEFDCE0-6B02-0BAA-B7EA-C72022B14D28}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1EEFDCE0-6B02-0BAA-B7EA-C72022B14D28}.Debug|Win32.Build.0 = Debug|Win32
+		{1EEFDCE0-6B02-0BAA-B7EA-C72022B14D28}.Release|Win32.ActiveCfg = Release|Win32
+		{1EEFDCE0-6B02-0BAA-B7EA-C72022B14D28}.Release|Win32.Build.0 = Release|Win32
+		{CC5E9607-78F0-4369-B3E6-83DF2DFFED55}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC5E9607-78F0-4369-B3E6-83DF2DFFED55}.Debug|Win32.Build.0 = Debug|Win32
+		{CC5E9607-78F0-4369-B3E6-83DF2DFFED55}.Release|Win32.ActiveCfg = Release|Win32
+		{CC5E9607-78F0-4369-B3E6-83DF2DFFED55}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
