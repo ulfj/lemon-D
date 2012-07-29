@@ -1560,7 +1560,8 @@ int main(int argc, char **argv)
 		/* Produce a header file for use by the scanner.  (This step is
 		** omitted if the "-m" option is used because makeheaders will
 		** generate the file for us.) */
-		if (!mhflag) ReportHeader(&lem);
+		if (!mhflag && outputLanguage == OUTPUT_LANGUAGE_C) 
+			ReportHeader(&lem);
 	}
 	if (statistics) {
 		printf("Parser statistics: %d terminals, %d nonterminals, %d rules\n",
@@ -3433,8 +3434,10 @@ PRIVATE void translate_code(struct lemon *lemp, struct rule *rp)
 			lemp->errorcnt++;
 		} else if (rp->rhsalias[i] == 0) {
 			if (has_destructor(rp->rhs[i], lemp)) {
-				append_str("  yy_destructor(yypParser,%d,&yymsp[%d].minor);\n", 0,
-				           rp->rhs[i]->index, i - rp->nrhs + 1);
+				append_str(
+					LS("  yy_destructor(yypParser,%d,&yymsp[%d].minor);\n",
+					   "  yy_destructor(%d,&yymsp[%d].minor);\n"),
+					0, rp->rhs[i]->index, i - rp->nrhs + 1);
 			} else {
 				/* No destructor defined for this term */
 			}

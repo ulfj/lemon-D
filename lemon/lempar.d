@@ -232,9 +232,9 @@ class ParseEx(MT = DefaultAllocator) {
         void ParseTrace(std.stdio.File* TraceFILE, string zTracePrompt) {
             yyTraceFILE = TraceFILE;
             yyTracePrompt = zTracePrompt;
-            if (yyTraceFILE == null)
-                yyTracePrompt = string();
-            else if (yyTracePrompt == 0)
+            if (yyTraceFILE is null)
+                yyTracePrompt = string.init;
+            else if (yyTracePrompt is null)
                 yyTraceFILE = null;
         }
 
@@ -242,16 +242,16 @@ class ParseEx(MT = DefaultAllocator) {
         ** are required.  The following table supplies these names
         */
 
-        static immutable string[] yyTokenName = {
+        static immutable(char[][]) yyTokenName = [
 %%
-        };
+        ];
 
         /* For tracing reduce actions, the names of all rules are required.
         */
 
-        static immutable string[] yyRuleName[] = {
+        static immutable(char[][]) yyRuleName = [
 %%
-        };
+        ];
     } // debug
 
 
@@ -692,7 +692,7 @@ class ParseEx(MT = DefaultAllocator) {
                 debug assert(yyact == YY_ERROR_ACTION);
 
                 debug if (yyTraceFILE) {
-                    fprintf(yyTraceFILE,"%sSyntax Error!\n", yyTracePrompt);
+                    yyTraceFILE.writef("%sSyntax Error!\n", yyTracePrompt);
                 }
 
                 static if (is(typeof(YYERRORSYMBOL) == enum)) {

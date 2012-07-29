@@ -15,6 +15,7 @@
   </PropertyGroup>
   <PropertyGroup Label="Globals">
     <RootNamespace>lemon</RootNamespace>
+    <ProjectGuid>{1EEFDCE0-6B02-0BAA-B7EA-C72022B14D28}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
